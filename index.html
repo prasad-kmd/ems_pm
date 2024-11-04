@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System</title>
+    <link rel="stylesheet" href="assets/css/index_style.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#signin">Sign In</a></li>
+                <li><a href="#signup">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>Event Management System</h1>
+        <p>Streamline your event planning with our intuitive platform.</p>
+        <button>Learn More</button>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features">
+        <h2>Unlock the Power of Efficient Event Management</h2>
+        <div class="feature-grid">
+            <div class="feature">
+                <h3>Event Scheduling</h3>
+                <p> Easily schedule and manage your events in one place.</p>
+            </div>
+            <div class="feature">
+                <h3>Client Management</h3>
+                <p>Keep track of your clients and their event bookings.</p>
+            </div>
+            <div class="feature">
+                <h3>Real-time Updates</h3>
+                <p>Stay informed with live updates on event bookings and changes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action (CTA) Buttons -->
+    <section id="cta">
+        <button id="signin-btn">Sign In</button>
+        <button id="signup-btn">Sign Up</button>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 Event Management System</p>
+        <ul>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </footer>
+
+    <!-- Sign In and Sign Up Modals (Basic Example) -->
+    <div id="signin-modal" style="display: none;">
+        <h2>Sign In</h2>
+        <form>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button>Sign In</button>
+        </form>
+    </div>
+
+    <div id="signup-modal" style="display: none;">
+        <h2>Sign Up</h2>
+        <form>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button>Sign Up</button>
+        </form>
+    </div>
+
+    <script>
+        // Basic JavaScript to toggle modals (expand as needed)
+        document.getElementById('signin-btn').addEventListener('click', function() {
+            document.getElementById('signin-modal').style.display = 'block';
+        });
+
+        document.getElementById('signup-btn').addEventListener('click', function() {
+            document.getElementById('signup-modal').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
