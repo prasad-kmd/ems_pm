@@ -1,0 +1,48 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.banner {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.button {
+    text-decoration: none;
+    color: #0056b3;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.features {
+    padding: 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.feature-item {
+    margin: 20px 0;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
