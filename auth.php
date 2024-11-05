@@ -1,68 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In / Sign Up</title>
     <link rel="stylesheet" href="assets/css/auth.css">
-    <script>
-        // Function to toggle between Sign In and Sign Up
-        function openTab(tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(tabName).style.display = "block";
-            event.currentTarget.className += " active";
-        }
-    </script>
+    <link rel="stylesheet" href="assets/css/loader.css">
 </head>
-<body onload="openTab('SignIn')"> <!-- Default to Sign In tab -->
 
-    <!-- Tab Buttons -->
-    <div class="tab">
-        <button class="tablinks" onclick="openTab('SignIn')">Sign In</button>
-        <button class="tablinks" onclick="openTab('SignUp')">Sign Up</button>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="signup_process.php" method="POST">
+                <h1>Create Account</h1>
+                <input placeholder="Name" type="text" id="name" name="name" required />
+                <input placeholder="Email" type="email" id="email" name="email" required />
+                <input placeholder="Password" type="password" id="password" name="password" required />
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="signin_process.php" method="POST">
+                <h1>Sign in</h1>
+                <input placeholder="Email" type="email" id="email" name="email" required />
+                <input placeholder="Password" type="password" id="password" name="password" required />
+                <!-- <a href="#">Forgot your password?</a> -->
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button><br>
+                    <button class="ghost" style="cursor: progress;"><span id="signInAdmin">Sign In(Admin)</span> <div id="loader" class="loader" style="display:none"></div></button>
+                </div>
+            </div>
+        </div>
     </div>
+    <script>
+        const signUpButton = document.getElementById('signUp');
+        const signInButton = document.getElementById('signIn');
+        const container = document.getElementById('container');
 
-    <!-- Sign In Form -->
-    <div id="SignIn" class="tabcontent">
-        <h2>Sign In</h2>
-        <form action="signin_process.php" method="POST">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+        signUpButton.addEventListener('click', () => {
+            container.classList.add("right-panel-active");
+        });
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-
-            <button type="submit">Sign In</button>
-        </form>
-    </div>
-
-    <!-- Sign Up Form -->
-    <div id="SignUp" class="tabcontent">
-        <h2>Sign Up</h2>
-        <form action="signup_process.php" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-
-            <label for="phone">Phone:</label>
-            <input type="text" id="phone" name="phone">
-
-            <button type="submit">Sign Up</button>
-        </form>
-    </div>
-
+        signInButton.addEventListener('click', () => {
+            container.classList.remove("right-panel-active");
+        });
+    </script>
+    <script>
+        document.getElementById("signInAdmin").addEventListener("click", function() {
+            document.getElementById("signInAdmin").style.display='none';
+            const loader = document.getElementById("loader");
+            loader.style.display='block';
+            setTimeout(function() {
+                window.location.href = "admin_login.php";
+            }, 2000);
+        });
+    </script>
 </body>
+
 </html>
