@@ -13,6 +13,7 @@ if (!isset($_SESSION['admin_id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrator Dashboard</title>
     <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="assets/css/fonts.css"/>
 </head>
 <body>
     <h1>Welcome, <?php echo $_SESSION['admin_name']; ?>!</h1>

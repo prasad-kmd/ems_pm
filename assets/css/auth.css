@@ -251,3 +251,45 @@ footer a {
     color: #3c97bf;
     text-decoration: none;
 }
+
+/* tooltips */
+.tooltip {
+  position: static;
+  display: block;
+  cursor: pointer;
+  /* font-family: "Arial", sans-serif; */
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: auto;
+  background-color: #000000a6;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  top: auto;
+  left: 50%;
+  margin-left: -100px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+/* .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  margin-left: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #fcf9f994 transparent;
+} */
+

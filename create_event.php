@@ -38,6 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Event</title>
     <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="assets/css/fonts.css"/>
 </head>
 <body>
     <h2>Create New Event</h2>
@@ -65,9 +66,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <label for="event_type">Event Type:</label>
         <select id="event_type" name="event_type" required>
-            <option value="Conference">Conference</option>
-            <option value="Seminar">Seminar</option>
-            <option value="Wedding">Wedding</option>
+            <option value="Conferences">Conferences</option>
+            <option value="Seminars">Seminars</option>
+            <option value="Sports Events">Sports Events</option>
+            <option value="Weddings">Weddings</option>
+            <option value="Birthday Parties">Birthday Parties</option>
+            <option value="Webinars">Webinars</option>
+            <option value="Training Sessions / Workshops">Training Sessions / Workshops</option>
+            <option value="Product Launches">Product Launches</option>
+            <option value="Trade Shows / Exhibitions">Trade Shows / Exhibitions</option>
+            <option value="Non-profit / Fundraising Events">Non-profit / Fundraising Events</option>
+            <option value="Art and Cultural Events">Art and Cultural Events</option>
+            <option value="Festivals">Festivals</option>
+            <option value="Fairs / Carnivals">Fairs / Carnivals</option>
+            <option value="VIP Events">VIP Events</option>
             <!-- Add more options as needed -->
         </select>
 

@@ -1,3 +1,6 @@
+button{
+  all: unset;
+}
 .login-box {
     position: absolute;
     top: 50%;

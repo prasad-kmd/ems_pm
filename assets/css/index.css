@@ -46,3 +46,57 @@ body {
     text-align: center;
     padding: 10px;
 }
+
+.loader {
+    height: 2px;
+    width: 100vh;
+    background: rgb(44, 44, 44);
+    position: relative;
+    overflow: hidden;
+  }
+  .loader .black_overlay {
+    background: linear-gradient(
+      87deg,
+      rgb(0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.14) 30%,
+      rgba(0, 0, 0, 0.14) 70%,
+      rgb(0, 0, 0) 100%
+    );
+    position: absolute;
+    inset: 0px;
+  }
+  .loader .light {
+    width: 70px;
+    height: 100%;
+    position: absolute;
+    left: -20%;
+    top: 0px;
+    background: linear-gradient(
+      87deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgb(0, 204, 255) 40%,
+      rgb(0, 204, 255) 60%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    -webkit-animation: light 2s infinite ease-in-out;
+    animation: light 2s infinite ease-in-out;
+  }
+  
+  @-webkit-keyframes light {
+    from {
+      left: -30%;
+    }
+    to {
+      left: 100%;
+    }
+  }
+  
+  @keyframes light {
+    from {
+      left: -30%;
+    }
+    to {
+      left: 100%;
+    }
+  }
+  

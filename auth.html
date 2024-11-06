@@ -7,6 +7,7 @@
     <title>Sign In / Sign Up</title>
     <link rel="stylesheet" href="assets/css/auth.css">
     <link rel="stylesheet" href="assets/css/loader.css">
+    <link rel="stylesheet" href="assets/css/fonts.css"/>
 </head>
 
 <body>
@@ -26,6 +27,12 @@
                 <input placeholder="Email" type="email" id="email" name="email" required />
                 <input placeholder="Password" type="password" id="password" name="password" required />
                 <!-- <a href="#">Forgot your password?</a> -->
+                <div class="tooltip">
+                    <a href="">Forgot your password?</a>
+                    <div class="tooltiptext">Please <a href="mailto:admin@ems.pm" style="all: unset;">Contact</a> System Administrator</div>
+                </div>
+                <br>
+                <!-- A button for Sign In -->
                 <button type="submit">Sign In</button>
             </form>
         </div>
@@ -39,8 +46,12 @@
                 <div class="overlay-panel overlay-right">
                     <h1>Hello, Friend!</h1>
                     <p>Enter your personal details and start journey with us</p>
+                    <!-- A button for Sign Up -->
                     <button class="ghost" id="signUp">Sign Up</button><br>
-                    <button class="ghost" style="cursor: progress;"><span id="signInAdmin">Sign In(Admin)</span> <div id="loader" class="loader" style="display:none"></div></button>
+                    <!-- A button for Sign In(Admin) -->
+                    <button class="ghost" style="cursor: progress;"><span id="signInAdmin">Sign In(Admin)</span>
+                        <div id="loader" class="loader" style="display:none"></div>
+                    </button>
                 </div>
             </div>
         </div>
@@ -59,15 +70,17 @@
         });
     </script>
     <script>
-        document.getElementById("signInAdmin").addEventListener("click", function() {
-            document.getElementById("signInAdmin").style.display='none';
-            const loader = document.getElementById("loader");
-            loader.style.display='block';
-            setTimeout(function() {
-                window.location.href = "admin_login.html";
-            }, 2000);
-        });
+        // This script is used for Sign In(Admin) button, it will redirect to admin_login.html page after 2 seconds but with a loader.
+        // document.getElementById("signInAdmin").addEventListener("click", function () {
+        //     document.getElementById("signInAdmin").style.display = 'none';
+        //     const loader = document.getElementById("loader");
+        //     loader.style.display = 'block';
+        //     setTimeout(function () {
+        //         window.location.href = "admin_login.html";
+        //     }, 2000);
+        // });
     </script>
+    <script src="assets/js/auth.js"></script>
 </body>
 
 </html>
