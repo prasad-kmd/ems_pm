@@ -19,7 +19,7 @@ $result = $conn->query($sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Events</title>
     <link rel="stylesheet" href="assets/css/dashboard.css">
-    <link rel="stylesheet" href="assets/css/fonts.css"/>
+    <link rel="stylesheet" href="assets/font/fonts.css"/>
 </head>
 <body>
     <h2>Manage Events</h2>

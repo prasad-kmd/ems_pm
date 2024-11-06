@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Event</title>
     <link rel="stylesheet" href="assets/css/dashboard.css">
-    <link rel="stylesheet" href="assets/css/fonts.css"/>
+    <link rel="stylesheet" href="assets/font/fonts.css"/>
 </head>
 <body>
     <h2>Create New Event</h2>
