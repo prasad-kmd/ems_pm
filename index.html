@@ -1,56 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Management System</title>
-    <link rel="stylesheet" href="assets/css/index.css">
-    <link rel="stylesheet" href="assets/font/fonts.css" />
-    <link rel="icon" href="assets/favicon/index_favicon.ico" type="image/x-icon">
+
+    <!-- Page Title -->
+    <title>Rathna Events - The Event Management Company</title>
+
+    <!-- Fonts -->
+     <link rel="stylesheet" href="assets/font/fonts.css">
+    <!-- Config -->
+    <link type="text/css" rel="stylesheet" href="assets/css/config.css">
+    <!-- Libraries -->
+    <link type="text/css" rel="stylesheet" href="assets/css/libs.css">
+    <!-- Template Styles -->
+    <link type="text/css" rel="stylesheet" href="assets/css/style_index.css">
+    <!-- Responsive -->
+    <link type="text/css" rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon/index_favicon.ico" sizes="32x32">
 </head>
-
-<body>
-
-    <!-- Banner Section -->
-    <header class="banner">
-        <h1>Welcome to Our Event Management System</h1>
-        <center>
-            <div class="loader">
-                <div class="light"></div>
-                <div class="black_overlay"></div>
+<body class="pmbsweb-fullscreen-page no-header-border no-footer-border disable-smooth-scroll">
+    <!-- Header -->
+    <header id="pmbsweb-header" class="is-frosted is-sticky" data-appear="fade-down" data-unload="fade-up">
+        <!-- Desktop Header -->
+        <div class="pmbsweb-header-inner">
+            <!-- Header Logo -->
+            <div class="pmbsweb-header-lp">
+                <a href="index.html" class="pmbsweb-logo">
+                    <img src="assets/images/logo.webp" alt="pmbsweb." width="150">
+                </a>
             </div>
-        </center>
-        <p>Organize, manage, and track events seamlessly with our all-in-one platform.</p>
-        <div class="button-container">
-            <a href="auth.html" class="button">Sign In | Sign Up</a>
-            <!-- <a href="signup.php" class="button">Sign Up</a> -->
+            <!-- Main Menu -->
+            <div class="pmbsweb-header-mp">
+                <nav class="pmbsweb-nav">
+                    <ul class="main-menu" data-stagger-appear="fade-down" data-stagger-delay="75">
+                        <li class="current-menu-item">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="contacts.html">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Header Button -->
+            <div class="pmbsweb-header-rp">
+                <a href="auth.html" class="pmbsweb-button">Get started</a>
+            </div>
+        </div>
+        <!-- Mobile Header -->
+        <div class="pmbsweb-mobile-header-inner">
+            <a href="index.html" class="pmbsweb-logo">
+                <img src="assets/images/logo.webp" alt="pmbsweb." width="150">
+            </a>
+            <a href="#" class="pmbsweb-mobile-menu-toggler">
+                <i class="pmbsweb-menu-toggler-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </i>
+            </a>
         </div>
     </header>
 
-    <!-- Features Section -->
-    <section class="features">
-        <h2>Why Choose Us?</h2>
-        <div class="feature-item">
-            <h3>Effortless Event Scheduling</h3>
-            <p>Plan events efficiently with our scheduling tools and avoid conflicts.</p>
-        </div>
-        <div class="feature-item">
-            <h3>Client and Booking Management</h3>
-            <p>Keep track of clients and bookings to streamline your event operations.</p>
-        </div>
-        <div class="feature-item">
-            <h3>Real-Time Communication</h3>
-            <p>Stay connected with clients through timely updates and notifications.</p>
-        </div>
-    </section>
+    <!-- Page Main -->
+    <main id="pmbsweb-main">
+        <!-- Slider Container -->
+        <div class="pmbsweb-slider-wrapper">
+            <!-- Slider -->
+            <div class="swiper pmbsweb-slider" data-duration="800" data-effect="slide">
+                <div class="swiper-wrapper">
 
-    <!-- Footer Section -->
-    <footer class="footer">
-        <p>&copy; 2024 Event Management System. All rights reserved.</p>
+                    <!-- Slider Item 01 -->
+                    <div class="swiper-slide">
+                        <img class="pmbsweb-lazy" src="assets/images/null.png" data-src="assets/images/index_hero1.webp" alt="" width="1920" height="1280">
+                        <div class="pmbsweb-slide-content">
+                            <div class="pmbsweb-slide-content-inner pmbsweb-slide-post-title">
+                                <span class="pmbsweb-meta">Book Events Effortlessly</span>
+                                <h4>Browse and book events with just a few clicks.</h4>
+                            </div>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                                        
+                    <!-- Slider Item 02 -->
+                    <div class="swiper-slide">
+                        <img class="pmbsweb-lazy" src="assets/images/null.png" data-src="assets/images/index_hero2.webp" alt="" width="1920" height="1280">
+                        <div class="pmbsweb-slide-content">
+                            <div class="pmbsweb-slide-content-inner pmbsweb-slide-post-title">
+                                <span class="pmbsweb-meta">Personalized Event List</span>
+                                <h4>Access your upcoming events and stay organized.</h4>
+                            </div>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                                        
+                    <!-- Slider Item 03 -->
+                    <div class="swiper-slide">
+                        <img class="pmbsweb-lazy" src="assets/images/null.png" data-src="assets/images/index_hero3.webp" alt="" width="1920" height="1280">
+                        <div class="pmbsweb-slide-content">
+                            <div class="pmbsweb-slide-content-inner pmbsweb-slide-post-title">
+                                <span class="pmbsweb-meta">Real-Time Easy Communication</span>
+                                <h4>Stay connected through timely updates and notifications.<br> Contact event organizers directly for inquiries.</h4>
+                            </div>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                                        
+                    <!-- Slider Item 04 -->
+                    <div class="swiper-slide">
+                        <img class="pmbsweb-lazy" src="assets/images/null.png" data-src="assets/images/index_hero4.webp" alt="" width="1920" height="1280">
+                        <div class="pmbsweb-slide-content">
+                            <div class="pmbsweb-slide-content-inner pmbsweb-slide-post-title">
+                                <span class="pmbsweb-meta">Real-time Updates</span>
+                                <h4>Receive notifications for event changes or reminders.</h4>
+                            </div>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                                        
+                    <!-- Slider Item 05 -->
+                    <div class="swiper-slide">
+                        <img class="pmbsweb-lazy" src="assets/images/null.png" data-src="assets/images/index_hero5.webp" alt="" width="1920" height="1280">
+                        <div class="pmbsweb-slide-content">
+                            <div class="pmbsweb-slide-content-inner pmbsweb-slide-post-title">
+                                <span class="pmbsweb-meta">Share Your Experience</span>
+                                <h4>Provide feedback to help us improve our services.</h4>
+                            </div>
+                            <a href="portfolio-post05.html"></a>
+                        </div>
+                    </div>
+                                        
+                    <!-- Slider Item 06 -->
+                    <div class="swiper-slide">
+                        <img class="pmbsweb-lazy" src="assets/images/null.png" data-src="assets/images/index_hero6.webp" alt="" width="1920" height="1280">
+                        <div class="pmbsweb-slide-content">
+                            <div class="pmbsweb-slide-content-inner pmbsweb-slide-post-title">
+                                <span class="pmbsweb-meta">Secure Payment Options</span>
+                                <h4>Make payments securely for your bookings.</h4>
+                            </div>
+                            <a href="portfolio-post06.html"></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div><!-- .pmbsweb-slider -->
+            <!-- Slider Navigation -->
+            <div class="pmbsweb-slider-nav on-sides">
+                <a href="#" class="pmbsweb-slider-prev">
+                    <span class="pmbsweb-icon pmbsweb-icon-arrow-left"></span>
+                </a>
+                <a href="#" class="pmbsweb-slider-next">
+                    <span class="pmbsweb-icon pmbsweb-icon-arrow-right"></span>
+                </a>
+            </div>
+        </div>
+	</main>
+
+    <!-- Footer -->
+    <footer id="pmbsweb-footer" data-appear="fade-up" data-threshold="0.25" data-unload="fade-down">
+        <div class="pmbsweb-footer-line stg-container">
+            <div class="align-center">
+                Copyright &copy; Rathna Events - The Event Management Company 2024. All Rights Reserved.
+            </div>
+        </div><!-- pmbsweb-footer-line -->
     </footer>
+
+    <!-- Right Click Protection Block -->
+    <div class="pmbsweb-rcp-wrap">
+        <div class="pmbsweb-rcp-overlay"></div>
+        <div class="pmbsweb-rcp-container">
+            <h2>The context menu is not allowed on this page.</h2>
+        </div>
+    </div>
+
+    <!-- Dynamic Backlight -->
+    <div class="pmbsweb-backlight"></div>
+
+    <!-- JS Scripts -->
+    <script src="assets/js/lib/jquery.min.js"></script>
+    <script src="assets/js/lib/libs.js"></script>
+    <script src="assets/js/st-core.js"></script>
+    <script src="assets/js/classes.js"></script>
+    <script src="assets/js/main.js"></script>
     <script src="assets/js/index-title.js"></script>
-
 </body>
-
 </html>
