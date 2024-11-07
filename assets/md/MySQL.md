@@ -122,6 +122,21 @@ CREATE TABLE Payments (
     PRIMARY KEY (payment_id),
     FOREIGN KEY (booking_id) REFERENCES Bookings(booking_id)
 ) ENGINE=INNODB;
+
+CREATE TABLE Messages (
+    message_id INT AUTO_INCREMENT,
+    client_id INT NOT NULL,
+    admin_id INT NOT NULL,
+    booking_id INT NOT NULL,
+    subject VARCHAR(255),
+    message_text TEXT,
+    sent_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (message_id),
+    FOREIGN KEY (client_id) REFERENCES Clients(client_id),
+    FOREIGN KEY (admin_id) REFERENCES Admins(admin_id),
+    FOREIGN KEY (booking_id) REFERENCES Bookings(booking_id)
+) ENGINE=INNODB;
+
 ```
 ### Setting up Database
  ! By setting up database engine with InnoDB can resolve some errors with ```VARCHAR``` .
