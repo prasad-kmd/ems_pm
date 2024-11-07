@@ -81,14 +81,14 @@
 :root {
     /* === FONT GROUPS === */
     /* Headings Font Family */
-    --pmbsweb-t-heading-ff: 'Inter', sans-serif;
+    --pmbsweb-t-heading-ff: 'Philosopher', sans-serif;
     
     /* Headings Font Weight */
     --pmbsweb-t-heading-fw: 600;
 
 
     /* Content Font Family */
-    --pmbsweb-t-content-ff: 'Inter', sans-serif;
+    --pmbsweb-t-content-ff: 'Julius Sans One', sans-serif;
 
     /* Content Font Weight */
     --pmbsweb-t-content-fw: 400;
