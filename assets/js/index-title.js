@@ -1,14 +1,14 @@
 // This will change the document title as required
 function changeTitle() {
     const titles = [
-        "Rathna Events - The Event Management Cooparation",
-        "Rathna Events - The Event Management Cooparation",
-        "Rathna Events - The Event Management Cooparation",
-        "රත්න Events - The Event Management Cooparation",
+        "Rathna Events - The Event Management Company",
+        "Rathna Events - The Event Management Company",
+        "Rathna Events - The Event Management Company",
+        "රත්න Events - The Event Management Company",
         "Effortless Event Scheduling",
         "Client and Booking Management",
         "Real-Time Communication",
-        "රත්න Events - The Event Management Cooparation",
+        "රත්න Events - The Event Management Company",
         // Add more titles as needed
     ];
 
