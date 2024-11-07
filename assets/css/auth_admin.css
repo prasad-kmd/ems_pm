@@ -46,6 +46,7 @@ button{
     border-bottom: 1px solid #fff;
     outline: none;
     background: transparent;
+    font-weight: bold;
   }
   .login-box .user-box label {
     position: absolute;

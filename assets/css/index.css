@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Philosopher', sans-serif;
     color: #333;
 }
 
@@ -28,6 +28,9 @@ body {
     padding: 10px 20px;
     border-radius: 5px;
     margin: 0 10px;
+    font-family: 'Sansumi';
+    font-weight: bold;
+    font-style: normal;
 }
 
 .features {
@@ -38,6 +41,8 @@ body {
 
 .feature-item {
     margin: 20px 0;
+    font-family: 'Aaargh';
+    font-weight: bold;
 }
 
 .footer {
