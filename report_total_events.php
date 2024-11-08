@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['admin_id'])) {
-    header("Location: admin_login.php");
+    header("Location: admin_login.html");
     exit();
 }
 
@@ -79,27 +79,6 @@ $result = $conn->query($sql);
         <?php } ?>
     </table>
 
-    <!-- <table border="1">
-        <tr>
-            <th>Event Title</th>
-            <th>Event Date</th>
-            <th>Start Time</th>
-            <th>End Time</th>
-            <th>Venue</th>
-            <th>Event Type</th>
-        </tr>
-        <?php while ($row = $result->fetch_assoc()) { ?>
-            <tr>
-                <td><?php echo $row['event_title']; ?></td>
-                <td><?php echo $row['event_date']; ?></td>
-                <td><?php echo $row['start_time']; ?></td>
-                <td><?php echo $row['end_time']; ?></td>
-                <td><?php echo $row['event_venue']; ?></td>
-                <td><?php echo $row['event_type']; ?></td>
-            </tr>
-        <?php } ?>
-    </table>
-    <a href="export_total_events_csv.php" class="export-button">Export to CSV</a> -->
     <script src="assets/js/semantic.js"></script>
     <script src="assets/js/jquery-3.7.1.min.js"></script>
 </body>

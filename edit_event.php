@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['admin_id'])) {
-    header("Location: admin_login.php");
+    header("Location: admin_login.html");
     exit();
 }
 
@@ -45,46 +45,104 @@ $conn->close();
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Event</title>
-    <link rel="stylesheet" href="assets/css/dashboard.css">
-    <link rel="stylesheet" href="assets/font/fonts.css"/>
+    <link rel="stylesheet" href="assets/css/semantic.css">
+    <link rel="stylesheet" href="assets/font/fonts.css" />
 </head>
+
 <body>
-    <h2>Edit Event</h2>
-    <form method="POST" action="">
-        <label for="title">Event Title:</label>
-        <input type="text" id="title" name="title" value="<?php echo $event['event_title']; ?>" required>
-
-        <label for="description">Description:</label>
-        <textarea id="description" name="description" required><?php echo $event['event_description']; ?></textarea>
-
-        <label for="date">Date:</label>
-        <input type="date" id="date" name="date" value="<?php echo $event['event_date']; ?>" required>
-
-        <label for="start_time">Start Time:</label>
-        <input type="time" id="start_time" name="start_time" value="<?php echo $event['start_time']; ?>" required>
-
-        <label for="end_time">End Time:</label>
-        <input type="time" id="end_time" name="end_time" value="<?php echo $event['end_time']; ?>" required>
-
-        <label for="venue">Venue:</label>
-        <input type="text" id="venue" name="venue" value="<?php echo $event['event_venue']; ?>" required>
-
-        <label for="capacity">Capacity:</label>
-        <input type="number" id="capacity" name="capacity" value="<?php echo $event['event_capacity']; ?>" required>
-
-        <label for="event_type">Event Type:</label>
-        <select id="event_type" name="event_type" required>
-            <option value="Conference" <?php if($event['event_type'] == 'Conference') echo 'selected'; ?>>Conference</option>
-            <option value="Seminar" <?php if($event['event_type'] == 'Seminar') echo 'selected'; ?>>Seminar</option>
-            <option value="Wedding" <?php if($event['event_type'] == 'Wedding') echo 'selected'; ?>>Wedding</option>
-            <!-- Add more options as needed -->
-        </select>
-
-        <button type="submit">Update Event</button>
+    <div class="ui inverted segment">
+        <div class="ui inverted secondary menu" style="font-family: 'Philosopher';">
+            <div class="item" width="50px">
+                <img src="assets/images/logo.webp" alt="Company Logo" width="50px">
+            </div>
+            <a class="active item">
+                Edit a Event
+            </a>
+            <!-- <a class="item">
+                Jobs
+            </a>
+            <a class="item">
+                Locations
+            </a> -->
+            <div class="right menu">
+                <div class="item">
+                    <a href="logout.php"><button class="ui right inverted secondary labeled icon button">
+                            <i class="sign out alternate icon"></i>
+                            <span style="font-family: 'Sansumi';font-weight: 500;">Log out</span>
+                        </button></a>
+                    <!-- &nbsp; -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui fluid vertical menu" style="padding: 5px;">
+        <span class="item" style="font-family: Neuropol;">Edit Existing Event</span>
+    </div>
+    <!-- ----------------------------------------------------------------------------- -->
+    <form class="ui form" style="padding: 25px;" method="POST" action="">
+        <span style="font-family: 'Orbit';">
+            <div class="required field">
+                <label for="title">Event Title:</label>
+                <input type="text" id="title" name="title" required placeholder="Event Title" value="<?php echo $event['event_title']; ?>">
+            </div>
+            <div class="required field">
+                <label for="description">Description:</label>
+                <textarea rows="2" id="description" name="description" required placeholder="Event Description"><?php echo $event['event_description']; ?></textarea>
+            </div>
+            <div class="three fields">
+                <div class="required field">
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required value="<?php echo $event['event_date']; ?>">
+                </div>
+                <div class="required field">
+                    <label for="start_time">Start Time:</label>
+                    <input type="time" id="start_time" name="start_time" required value="<?php echo $event['start_time']; ?>">
+                </div>
+                <div class="required field">
+                    <label for="end_time">End Time:</label>
+                    <input type="time" id="end_time" name="end_time" required value="<?php echo $event['end_time']; ?>">
+                </div>
+            </div>
+            <div class="required field">
+                <label for="venue">Venue:</label>
+                <input type="text" id="venue" name="venue" placeholder="Venue" required value="<?php echo $event['event_venue']; ?>">
+            </div>
+            <div class="two fields">
+                <div class="required field">
+                    <label for="capacity">Capacity:</label>
+                    <input type="number" id="capacity" name="capacity" placeholder="Capacity" value="<?php echo $event['event_capacity']; ?>" required>
+                </div>
+                <div class="required field">
+                    <label for="event_type">Event Type:</label>
+                    <select id="event_type" name="event_type" required>
+                        <option value="Conferences" <?php if ($event['event_type'] == 'Conferences') echo 'selected'; ?>>Conferences</option>
+                        <option value="Seminars" <?php if ($event['event_type'] == 'Seminars') echo 'selected'; ?>>Seminars</option>
+                        <option value="Sports Events" <?php if ($event['event_type'] == 'Sports Events') echo 'selected'; ?>>Sports Events</option>
+                        <option value="Weddings" <?php if ($event['event_type'] == 'Weddings') echo 'selected'; ?>>Weddings</option>
+                        <option value="Birthday Parties" <?php if ($event['event_type'] == 'Birthday Parties') echo 'selected'; ?>>Birthday Parties</option>
+                        <option value="Webinars <?php if ($event['event_type'] == 'Webinars') echo 'selected'; ?>">Webinars</option>
+                        <option value="Training Sessions / Workshops" <?php if ($event['event_type'] == 'Training Sessions / Workshops') echo 'selected'; ?>>Training Sessions / Workshops</option>
+                        <option value="Product Launches" <?php if ($event['event_type'] == 'Product Launches') echo 'selected'; ?>>Product Launches</option>
+                        <option value="Trade Shows / Exhibitions" <?php if ($event['event_type'] == 'Trade Shows / Exhibitions') echo 'selected'; ?>>Trade Shows / Exhibitions</option>
+                        <option value="Non-profit / Fundraising Events" <?php if ($event['event_type'] == 'Non-profit / Fundraising Events') echo 'selected'; ?>>Non-profit / Fundraising Events</option>
+                        <option value="Art and Cultural Events" <?php if ($event['event_type'] == 'Art and Cultural Events') echo 'selected'; ?>>Art and Cultural Events</option>
+                        <option value="Festivals" <?php if ($event['event_type'] == 'Festivals') echo 'selected'; ?>>Festivals</option>
+                        <option value="Fairs / Carnivals" <?php if ($event['event_type'] == 'Fairs / Carnivals') echo 'selected'; ?>>Fairs / Carnivals</option>
+                        <option value="VIP Events" <?php if ($event['event_type'] == 'VIP Events') echo 'selected'; ?>>VIP Events</option>
+                    </select>
+                </div>
+            </div>
+            <button class="ui button" type="submit" style="font-family: 'Neuropol';">Upadate the Event</button>
+        </span>
     </form>
+
+    <script src="assets/js/semantic.js"></script>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
 </body>
+
 </html>
