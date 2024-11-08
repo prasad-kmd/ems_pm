@@ -1,6 +1,7 @@
 **Event Management System (EMS)**
 =====================================
-
+# _What's the Purpose of this Project?_
+**This Repository is used to provide some space for my academic projects. Specially used for Mini Project | EEX3417 | OUSL**
 
 **Local Deployment using WAMP Server**
 --------------------------------------
