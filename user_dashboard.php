@@ -7,12 +7,6 @@ if (!isset($_SESSION['user_id'])) {
 
 include 'db_connection.php';
 $client_id = $_SESSION['user_id'];
-
-// Fetch messages for the logged-in client
-$stmt = $conn->prepare("SELECT subject, message_text, sent_at FROM Messages WHERE client_id = ? ORDER BY sent_at DESC");
-$stmt->bind_param("i", $client_id);
-$stmt->execute();
-$messages = $stmt->get_result();
 ?>
 
 <!DOCTYPE html>
@@ -92,7 +86,4 @@ $messages = $stmt->get_result();
 
 </html>
 
-<?php
-$stmt->close();
-$conn->close();
-?>
+<?php $conn->close(); ?>

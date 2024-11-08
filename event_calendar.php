@@ -14,7 +14,6 @@ if (!isset($_SESSION['admin_id'])) {
     <title>Event Calendar</title>
     <link rel="stylesheet" href="dashboard.css">
     <!-- Include FullCalendar CSS and JS -->
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.10.1/main.min.css" rel="stylesheet"> -->
     <script src="assets/js/cal/index.global.js"></script>
 </head>
 <body>

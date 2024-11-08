@@ -8,7 +8,7 @@ session_unset();
 // Destroy the session
 session_destroy();
 
-// Redirect to the login page (or homepage, depending on your system)
+// Redirect to the login page 
 header("Location: auth.html");
 exit();
 ?>
