@@ -71,8 +71,20 @@ $result = $conn->query($sql);
                     <td><?php echo $row['event_date']; ?></td>
                     <td><?php echo $row['event_venue']; ?></td>
                     <td>
-                        <a href="edit_event.php?event_id=<?php echo $row['event_id']; ?>">Edit</a>
-                        <a href="delete_event.php?event_id=<?php echo $row['event_id']; ?>" onclick="return confirm('Are you sure you want to delete this event?');">Delete</a>
+                        <div class="ui animated button" tabindex="0"><a href="edit_event.php?event_id=<?php echo $row['event_id']; ?>">
+                                <div class="visible content">Edit</div>
+                                <div class="hidden content">
+                                    <i class="edit outline icon"></i>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="ui vertical animated button" tabindex="0"><a href="delete_event.php?event_id=<?php echo $row['event_id']; ?>" onclick="return confirm('Are you sure you want to delete this event?');">
+                                <div class="visible content">Delete</div>
+                                <div class="hidden content">
+                                    <i class="archive icon"></i>
+                                </div>
+                            </a>
+                        </div>
                     </td>
                 </tr>
             </tbody>

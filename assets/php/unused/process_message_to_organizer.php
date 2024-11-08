@@ -1,7 +1,7 @@
 <?php
 session_start();
-if (!isset($_SESSION['admin_id'])) {
-    header("Location: admin_login.php");
+if (!isset($_SESSION['user_id'])) {
+    header("Location: signin.php");
     exit();
 }
 
@@ -13,21 +13,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $subject = $_POST['subject'];
     $message_text = $_POST['message_text'];
 
-    // Insert the message into the Messages table
+    // Set a default value for admin_id to indicate the message is from a client
+    $admin_id = 1; // Or -1, to differentiate from actual admin IDs
+
+    // Insert message into the Messages table
     $stmt = $conn->prepare("INSERT INTO Messages (client_id, admin_id, booking_id, subject, message_text) VALUES (?, ?, ?, ?, ?)");
-    $admin_id = $_SESSION['admin_id'];
     $stmt->bind_param("iiiss", $client_id, $admin_id, $booking_id, $subject, $message_text);
 
     if ($stmt->execute()) {
-        echo "Message sent to user dashboard!";
+        $_SESSION['message'] = "Your message has been sent to the organizer.";
     } else {
-        echo "Error sending message.";
+        $_SESSION['message'] = "Failed to send message: " . $stmt->error;
     }
 
     $stmt->close();
 }
 
 $conn->close();
-header("Location: manage_bookings.php");
+header("Location: user_dashboard.php");
 exit();
 ?>

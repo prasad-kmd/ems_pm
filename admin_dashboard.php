@@ -70,11 +70,11 @@ if (!isset($_SESSION['admin_id'])) {
             &nbsp;
         </div>
     </div>
-    <div class="ui six item menu" style="padding: 5px;">
+    <div class="ui five item menu" style="padding: 5px;">
         <a href="create_event.php" class="item"><i class="plus square outline icon"></i>Create Event</a>
         <a href="manage_events.php" class="item"><i class="bookmark outline icon"></i>Manage Events</a>
         <a href="manage_bookings.php" class="item"><i class="bookmark icon"></i>Manage Bookings</a>
-        <a href="client_communication.php" class="item"><i class="quote left icon"></i>Client Communication</a>
+        <!-- <a href="client_communication.php" class="item"><i class="quote left icon"></i>Client Communication</a> -->
         <a href="event_calendar.php" class="item"><i class="calendar alternate outline icon"></i>Event Calendar</a>
         <a href="reports.php" class="item"><i class="file alternate icon"></i>Generate Reports</a>
     </div>
