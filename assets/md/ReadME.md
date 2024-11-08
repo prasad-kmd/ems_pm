@@ -1,6 +1,7 @@
 **Event Management System (EMS)**
 =====================================
 
+
 **Local Deployment using WAMP Server**
 --------------------------------------
 
@@ -23,11 +24,11 @@
 1. **Clone the Repository**:
 	* Open Command Prompt/Powershell
 	* Navigate to your WAMP `www` directory (typically `C:\wamp64\www`)
-	* Run `git clone https://your-repo-url.com event-management-system`
+	* Run `git clone https://github.com/prasad-kmd/ems_pm event-management-system`
 2. **Database Setup**:
 	* Open `phpMyAdmin` via WAMP (usually `http://localhost/phpmyadmin`)
 	* Create a new database (e.g., `ems_database`)
-	* Import the provided `ems_database.sql` file (found in the repository's root directory) into your newly created database
+	* Import the provided `ems_database.sql` file (found in the repository's root directory) into your newly created database [TODO]
 3. **Configure Database Connection**:
 	* Navigate to `event-management-system/config`
 	* Open `database.php` and update the database credentials to match your setup:
@@ -82,13 +83,13 @@
 ------------
 
 * **MIT License**: This project is licensed under the MIT License.
-* **Copyright**: [Your Name] [Year]. All rights reserved.
+* **Copyright**: Prasad Madhuranga 2024. All rights reserved.
 
 ### **Authors & Acknowledgments**
 ---------------------------------
 
-* **[Your Name]**: Initial Work
-* **[Contributor Names]**: Thanks for their support.
+* **Prasad Madhuranga**: Initial Work
+* **Internet**: Thanks for their support.
 
 **Example Use Case for Local Deployment:**
 
