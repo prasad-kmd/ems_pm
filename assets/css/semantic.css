@@ -27300,7 +27300,7 @@ Floated Menu / Item
 }
 
 .ui.card {
-  margin: 1em 0em;
+  /* margin: 1em 0em; */
 }
 
 .ui.cards > .card a,
